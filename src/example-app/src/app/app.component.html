@@ -1,0 +1,20 @@
+<h1>HttpClient Example</h1>
+<div class="checkboxes">
+  <label>
+    <input type="checkbox" [checked]="showCidades" (click)="toggleCidades()">
+    Cidades
+  </label>
+
+  <label>
+    <input type="checkbox" [checked]="showPessoas" (click)="togglePessoas()">
+    Pessoas
+  </label>
+</div>
+
+<section *ngIf="showCidades">
+  <app-cidade></app-cidade>
+</section>
+
+<section *ngIf="showPessoas">
+  <app-pessoa></app-pessoa>
+</section>
